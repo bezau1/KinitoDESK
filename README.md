@@ -1,7 +1,7 @@
 # KinitoDESK
 KinitoPET is now a real desktop pet and a additional the "grant KinitoPET.exe system.access" command
 # Licence
-The KinitoDESK project is licenced under the apache license that you agree to if you make a new version of my project, tell everyone what you changed and the original is by bezau1, you can see the full licance if you click licence
+The KinitoDESK project is licenced under the apache license that you agree to if you make a new version of my project, tell everyone what you changed and the original is by bezau1, you can see the full licence if you click licence
 # How to setup KinitiDESK?
 Just run the exe from the KinitoDESKPET folder.
 # How to setup the CMD command?
