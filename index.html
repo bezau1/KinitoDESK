@@ -5,160 +5,22 @@
   <title>KinitoPET</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      background: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000;
-    }
-
-    .page {
-      max-width: 960px;
-      margin: 0 auto;
-      padding-bottom: 50px;
-    }
-
-    /* LOGO (no pink strip) */
-    .logo {
-      padding: 18px 0 0 12px;
-    }
-    .logo img {
-  width: auto;
-  max-width: 700px; /* adjust if needed */
-  height: auto;
-  display: block;
-}
-    /* HERO IMAGE */
-    .hero {
-      margin-top: 26px;
-      text-align: center;
-    }
-    .hero img {
-      max-width: 460px;
-      width: 100%;
-      height: auto;
-    }
-
-    .hero-note {
-      margin-top: 10px;
-      font-size: 10px;
-      color: #707070;
-    }
-
-    /* INTRO TEXT + RIGHT IMAGE */
-    .intro-row {
-      margin-top: 28px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      align-items: flex-start;
-    }
-    .intro-text {
-      max-width: 540px;
-      font-size: 12px;
-      line-height: 1.4;
-    }
-    .intro-img img {
-      max-width: 150px;
-      height: auto;
-      display: block;
-    }
-
-    /* DOWNLOAD IMAGE BLOCK (NO BUTTON ELEMENT) */
-    .download-area {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .download-area img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    .download-button {
-      margin: 10px auto;
-      display: inline-block;
-    }
-
-    /* FEATURE SECTIONS */
-    .section-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 28px;
-      margin-bottom: 40px;
-    }
-    .section-row img {
-      max-width: 280px;
-      width: 100%;
-    }
-    .section-text {
-      max-width: 360px;
-      font-size: 12px;
-      line-height: 1.4;
-    }
-    .section-title {
-      font-weight: bold;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-
-    /* FOOTER BLACK BAR */
-    .footer-black {
-      width: 100%;
-      background: #000;
-      padding: 20px 40px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #5f5f5f;
-    }
-    .footer-barcode {
-      font-family: "Courier New", monospace;
-      font-size: 14px;
-      letter-spacing: 2px;
-      color: #595959;
-    }
-    .footer-links a {
-      color: #5f5f5f;
-      text-decoration: underline;
-      margin-left: 18px;
-      font-size: 12px;
-    }
-
-    @media (max-width: 800px) {
-      .intro-row,
-      .section-row {
-        flex-direction: column;
-      }
-      .footer-black {
-        flex-direction: column;
-        gap: 14px;
-        padding: 20px 20px;
-      }
-      .footer-links {
-        display: flex;
-      }
-    }
-  </style>
+  <!-- LINK TO EXTERNAL CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="page">
 
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="unnamed.png" alt="KinitoPET logo">
-    </div>
+  <!-- REAL OG TOP LOGO (full size) -->
+  <div class="logo-strip">
+    <img src="unnamed.png" alt="KinitoPET Logo">
+  </div>
+
+  <div class="page">
 
     <!-- HERO IMAGE -->
     <div class="hero">
-      <img src="unnamed1.png" alt="Kinito hero image">
+      <img src="unnamed1.png" alt="">
       <div class="hero-note">(NOTE: KinitoPET will learn and adapt to you)</div>
     </div>
 
@@ -176,67 +38,59 @@
       </div>
     </div>
 
-    <!-- DOWNLOAD IMAGE BLOCK -->
+    <!-- DOWNLOAD BLOCK (IMAGE ONLY) -->
     <div class="download-area">
       <img src="stripg1.png" alt="">
-      <a href="https://github.com/bezau1/KinitoDESK/releases/download/kinito/KinitoPET.zip" class="download-button">
-        <img src="unnamed3.png" alt="Download">
+      <a href="https://github.com/bezau1/KinitoDESK/releases/download/kinito/KinitoPET.zip">
+        <img class="download-button" src="unnamed3.png" alt="Download">
       </a>
       <img src="stripg2.png" alt="">
     </div>
 
-    <!-- SECTIONS -->
-    <div class="sections">
-
-      <!-- MEET KINITO -->
-      <div class="section-row">
-        <img src="unnamed4.png" alt="">
-        <div class="section-text">
-          <div class="section-title">Meet Kinito!</div>
-          <p>Kinito is a friendly, fun-loving companion who can keep your computer safe!</p>
-          <p><em>(NOTE: KinitoPET might not keep your computer safe).</em></p>
-          <p>His multitude of great features go hand in hand with his upstanding personality that is sure to keep you entertained!</p>
-          <p>Kinito has always been the face of the 1986's Kinito Crew collection and that is why we are delighted to bring our loveable mascot into the digital age!</p>
-          <p>So why wait? Add KinitoPET to your machine today!</p>
-        </div>
+    <!-- FEATURE SECTIONS -->
+    <div class="section-row">
+      <img src="unnamed4.png" alt="">
+      <div class="section-text">
+        <div class="section-title">Meet Kinito!</div>
+        <p>Kinito is a friendly, fun-loving companion who can keep your computer safe!</p>
+        <p><em>(NOTE: KinitoPET might not keep your computer safe).</em></p>
+        <p>His multitude of great features go hand in hand with his upstanding personality that is sure to keep you entertained!</p>
+        <p>Kinito has always been the face of the 1986's Kinito Crew collection and that is why we are delighted to bring our loveable mascot into the digital age!</p>
+        <p>So why wait? Add KinitoPET to your machine today!</p>
       </div>
-
-      <!-- LET'S BE FRIENDS -->
-      <div class="section-row">
-        <div class="section-text">
-          <div class="section-title">Let's be Friends!</div>
-          <p>"I can read!" – Kinito will WOW you with his heartfelt stories!</p>
-          <p>"I play games!" – The KinitoPET virtual assistant comes with a multitude of online games from the likes of the beloved Kinito Crew!</p>
-          <p>"I adapt to you!" – Form a deep connection with KinitoPET using R.R.A technology giving randomised conversations based on REAL WORLD EXAMPLES!</p>
-          <p>This revolutionary technology keeps your conversations fresh with KinitoPET learning more and more about you!</p>
-        </div>
-        <img src="unnamed5.png" alt="">
-      </div>
-
-      <!-- WEB WORLD -->
-      <div class="section-row">
-        <img src="unnamed6.png" alt="">
-        <div class="section-text">
-          <div class="section-title">Welcome To The Web World!</div>
-          <p>KinitoPET comes packaged with The Kinito Crews Web World, a fun and entertaining place where you can meet the beloved Kinito Crew characters in a new digital form.</p>
-          <p>Jade the Jellyfish, Kinito the Axolotl and Sam the Sea Anemone meet once again through small games and puzzles that will keep you entertained!</p>
-          <p>Learn new fun facts about the ocean of our planet with amazing games suited just for you!</p>
-        </div>
-      </div>
-
     </div>
+
+    <div class="section-row">
+      <div class="section-text">
+        <div class="section-title">Let's be Friends!</div>
+        <p>"I can read!" – Kinito will WOW you with his heartfelt stories!</p>
+        <p>"I play games!" – The KinitoPET virtual assistant comes with a multitude of online games!</p>
+        <p>"I adapt to you!" – KinitoPET gives randomised conversations based on REAL WORLD EXAMPLES!</p>
+        <p>This revolutionary technology keeps your conversations fresh with KinitoPET learning more and more about you!</p>
+      </div>
+      <img src="unnamed5.png" alt="">
+    </div>
+
+    <div class="section-row">
+      <img src="unnamed6.png" alt="">
+      <div class="section-text">
+        <div class="section-title">Welcome To The Web World!</div>
+        <p>KinitoPET comes packaged with The Kinito Crews Web World!</p>
+        <p>Jade the Jellyfish, Kinito the Axolotl and Sam the Sea Anemone meet once again!</p>
+        <p>Learn new fun facts about the ocean with amazing games suited just for you!</p>
+      </div>
+    </div>
+
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-black">
-      <div class="footer-barcode">█ │█│ █ █ █  █│█ █ │ █│</div>
-      <div class="footer-links">
-        <a href="#">contact</a>
-        <a href="#">twitter</a>
-        <a href="#">youtube</a>
-        <a href="#">steam</a>
-      </div>
+  <footer class="footer-black">
+    <div class="footer-barcode">█ │█│ █ █ █  █│█ █ │ █│</div>
+    <div class="footer-links">
+      <a href="#">contact</a>
+      <a href="#">twitter</a>
+      <a href="#">youtube</a>
+      <a href="#">steam</a>
     </div>
   </footer>
 
