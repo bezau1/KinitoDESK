@@ -1,70 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>KinitoPET</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
-      color: #000000;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* PAGE WRAPPER */
     .page {
       max-width: 960px;
       margin: 0 auto;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
     }
 
-    /* HEADER: LOGO + PINK STRIP */
-    .header {
-      padding-top: 18px;
-    }
-
+    /* LOGO (no pink strip) */
     .logo {
-      margin-left: 12px; /* small offset like OG */
+      padding: 18px 0 0 12px;
     }
-
     .logo img {
-      display: block;
+      max-width: 300px;
       height: auto;
-      max-width: 100%;
+      display: block;
     }
 
-    .pink-strip {
-      margin-top: 6px;
-      width: 100%;
-      height: 6px;
-      background: #ff5abf; /* bright pink */
-    }
-
-    .pink-strip-text {
-      margin-top: 4px;
-      text-align: center;
-      font-size: 11px;
-      text-transform: uppercase;
-      color: #ff5abf;
-      letter-spacing: 0.08em;
-    }
-
-    /* HERO AREA */
+    /* HERO IMAGE */
     .hero {
       margin-top: 26px;
       text-align: center;
     }
-
     .hero img {
       max-width: 460px;
       width: 100%;
@@ -77,196 +49,148 @@
       color: #707070;
     }
 
-    /* INTRO TEXT + SIDE MASCOT */
+    /* INTRO TEXT + RIGHT IMAGE */
     .intro-row {
-      margin-top: 26px;
+      margin-top: 28px;
       display: flex;
       justify-content: center;
+      gap: 30px;
       align-items: flex-start;
-      gap: 26px;
     }
-
     .intro-text {
       max-width: 540px;
       font-size: 12px;
       line-height: 1.4;
-      text-align: left;
     }
-
-    .intro-mascot img {
+    .intro-img img {
       max-width: 150px;
       height: auto;
       display: block;
     }
 
-    /* DOWNLOAD AREA (3 IMAGES) */
+    /* DOWNLOAD IMAGE BLOCK (NO BUTTON ELEMENT) */
     .download-area {
-      margin-top: 36px;
+      margin-top: 40px;
       text-align: center;
     }
-
     .download-area img {
-      display: block;
-      margin: 0 auto;
       max-width: 100%;
       height: auto;
+      display: block;
+      margin: 0 auto;
     }
-
-    .download-top-strip,
-    .download-bottom-strip {
-      margin: 6px auto;
-    }
-
     .download-button {
       margin: 10px auto;
-      cursor: pointer;
       display: inline-block;
     }
 
-    /* CONTENT SECTIONS */
-    .sections {
-      margin-top: 40px;
-    }
-
+    /* FEATURE SECTIONS */
     .section-row {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 28px;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
     }
-
     .section-row img {
       max-width: 280px;
       width: 100%;
-      height: auto;
-      display: block;
     }
-
     .section-text {
-      max-width: 340px;
+      max-width: 360px;
       font-size: 12px;
       line-height: 1.4;
-      text-align: left;
     }
-
     .section-title {
       font-weight: bold;
       margin-bottom: 6px;
-      font-size: 13px;
+      font-size: 14px;
     }
 
-    .section-text p {
-      margin: 0 0 4px 0;
-    }
-
-    .section-text ul {
-      margin: 4px 0;
-      padding-left: 16px;
-    }
-
-    .section-text li {
-      margin-bottom: 3px;
-    }
-
-    /* BOTTOM “BARCODE” + LINKS */
-    .footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 10px;
-      color: #333333;
-    }
-
-    .footer-barcode {
-      margin-bottom: 6px;
-      font-family: "Courier New", monospace;
-    }
-
-    .footer-links {
-      border-top: 1px solid #000000;
-      padding-top: 6px;
-      margin: 0 auto;
-      max-width: 260px;
+    /* FOOTER BLACK BAR */
+    .footer-black {
+      width: 100%;
+      background: #000;
+      padding: 20px 40px;
+      margin-top: 60px;
       display: flex;
       justify-content: space-between;
-      font-size: 9px;
-      text-transform: lowercase;
+      align-items: center;
+      color: #5f5f5f;
     }
-
+    .footer-barcode {
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #595959;
+    }
     .footer-links a {
+      color: #5f5f5f;
       text-decoration: underline;
+      margin-left: 18px;
+      font-size: 12px;
     }
 
-    /* MOBILE-ish */
     @media (max-width: 800px) {
       .intro-row,
       .section-row {
         flex-direction: column;
       }
-
-      .intro-mascot {
-        order: -1;
+      .footer-black {
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px 20px;
       }
-
-      .sections {
-        margin-top: 30px;
+      .footer-links {
+        display: flex;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
-    <!-- HEADER -->
-    <header class="header">
-      <div class="logo">
-        <img src="unnamed.png" alt="KinitoPET logo">
-      </div>
-      <div class="pink-strip"></div>
-      <div class="pink-strip-text">Take a second and make a friend for LIFE!</div>
-    </header>
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="unnamed.png" alt="KinitoPET logo">
+    </div>
 
     <!-- HERO IMAGE -->
-    <section class="hero">
-      <img src="unnamed1.png" alt="Kinito hero">
-      <div class="hero-note">
-        (NOTE: KinitoPET will learn and adapt to you)
-      </div>
-    </section>
+    <div class="hero">
+      <img src="unnamed1.png" alt="Kinito hero image">
+      <div class="hero-note">(NOTE: KinitoPET will learn and adapt to you)</div>
+    </div>
 
-    <!-- INTRO TEXT + SIDE MASCOT -->
-    <section class="intro-row">
+    <!-- INTRO TEXT + SIDE IMAGE -->
+    <div class="intro-row">
       <div class="intro-text">
         <p>KinitoPET invites you to their wonderful world, full of fun and excitement!</p>
         <p>There, he will be your very own virtual friend and personal helper!</p>
         <p>Kinito is able to walk, talk, browse, adapt, and play games; as Kinito is like no other with its adaptive technology!</p>
         <p>Kinito is a friend you'll never forget with its critically acclaimed R.R.A to make your experience truly unique, where else can you find a friend like Kinito with its multitude of great features and friendly love!</p>
       </div>
-      <div class="intro-mascot">
-        <img src="unnamed2.png" alt="Kinito reading">
+
+      <div class="intro-img">
+        <img src="unnamed2.png" alt="">
       </div>
-    </section>
+    </div>
 
-    <!-- DOWNLOAD STRIP (IMAGE BUTTON) -->
-    <section class="download-area">
-      <img class="download-top-strip" src="stripg1.png" alt="">
-      <a
-        class="download-button"
-        href="https://github.com/bezau1/KinitoDESK/releases/download/kinito/KinitoPET.zip"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="unnamed3.png" alt="Download now">
+    <!-- DOWNLOAD IMAGE BLOCK -->
+    <div class="download-area">
+      <img src="stripg1.png" alt="">
+      <a href="https://github.com/bezau1/KinitoDESK/releases/download/kinito/KinitoPET.zip" class="download-button">
+        <img src="unnamed3.png" alt="Download">
       </a>
-      <img class="download-bottom-strip" src="stripg2.png" alt="">
-    </section>
+      <img src="stripg2.png" alt="">
+    </div>
 
-    <!-- FEATURE SECTIONS -->
-    <section class="sections">
-      <!-- Meet Kinito -->
+    <!-- SECTIONS -->
+    <div class="sections">
+
+      <!-- MEET KINITO -->
       <div class="section-row">
-        <div class="section-image">
-          <img src="unnamed4.png" alt="KinitoPET screenshot 1">
-        </div>
+        <img src="unnamed4.png" alt="">
         <div class="section-text">
           <div class="section-title">Meet Kinito!</div>
           <p>Kinito is a friendly, fun-loving companion who can keep your computer safe!</p>
@@ -277,27 +201,21 @@
         </div>
       </div>
 
-      <!-- Let's be Friends -->
+      <!-- LET'S BE FRIENDS -->
       <div class="section-row">
         <div class="section-text">
           <div class="section-title">Let's be Friends!</div>
-          <ul>
-            <li>"I can read!" – Kinito will WOW you with his heartfelt stories!</li>
-            <li>"I play games!" – The KinitoPET virtual assistant comes with a multitude of online games from the likes of the beloved Kinito Crew!</li>
-            <li>"I adapt to you!" – Form a deep connection with KinitoPET as with the top of the line R.R.A technology, KinitoPET is able to give randomised conversations based on REAL WORLD EXAMPLES!</li>
-          </ul>
+          <p>"I can read!" – Kinito will WOW you with his heartfelt stories!</p>
+          <p>"I play games!" – The KinitoPET virtual assistant comes with a multitude of online games from the likes of the beloved Kinito Crew!</p>
+          <p>"I adapt to you!" – Form a deep connection with KinitoPET using R.R.A technology giving randomised conversations based on REAL WORLD EXAMPLES!</p>
           <p>This revolutionary technology keeps your conversations fresh with KinitoPET learning more and more about you!</p>
         </div>
-        <div class="section-image">
-          <img src="unnamed5.png" alt="KinitoPET screenshot 2">
-        </div>
+        <img src="unnamed5.png" alt="">
       </div>
 
-      <!-- Welcome To The Web World -->
+      <!-- WEB WORLD -->
       <div class="section-row">
-        <div class="section-image">
-          <img src="unnamed6.png" alt="KinitoPET Web World screenshot">
-        </div>
+        <img src="unnamed6.png" alt="">
         <div class="section-text">
           <div class="section-title">Welcome To The Web World!</div>
           <p>KinitoPET comes packaged with The Kinito Crews Web World, a fun and entertaining place where you can meet the beloved Kinito Crew characters in a new digital form.</p>
@@ -305,10 +223,13 @@
           <p>Learn new fun facts about the ocean of our planet with amazing games suited just for you!</p>
         </div>
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-black">
       <div class="footer-barcode">█ │█│ █ █ █  █│█ █ │ █│</div>
       <div class="footer-links">
         <a href="#">contact</a>
@@ -316,7 +237,8 @@
         <a href="#">youtube</a>
         <a href="#">steam</a>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
+
 </body>
 </html>
