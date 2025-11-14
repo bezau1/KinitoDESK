@@ -132,3 +132,12 @@ body {
   text-decoration: underline;
   font-size: 14px;
 }
+.logo-strip {
+    width: 100%;
+    text-align: center !important;
+}
+
+.logo-strip img {
+    display: inline-block !important;
+    margin: 0 auto !important;
+}
