@@ -1,0 +1,14 @@
+.logo-strip {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-strip img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  max-width: none;  
+}
